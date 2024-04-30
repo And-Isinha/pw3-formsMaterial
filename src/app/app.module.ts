@@ -9,18 +9,20 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TarefaComponent
+    TarefaComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
