@@ -4,7 +4,9 @@
     <mat-form-field class="example-full-width">
         <mat-label>Nome</mat-label>
         <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
-        <mat-error *ngIf="false">Nome é obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.nome.hasError('required')">Nome é obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.nome.hasError('minlength')">O nome deve conter entre 3 e 35 caracteres</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.nome.hasError('maxlength')">O nome deve conter entre 3 e 35 caracteres</mat-error>
     </mat-form-field>
 
     <br />
@@ -13,8 +15,9 @@
         <mat-label>E-mail</mat-label>
         <input matInput placeholder="Ex. horacio@etec.sp.gov.br" formControlName="email">
 
-        <mat-error *ngIf="false">E-mail é obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">E-mail é obrigatório</mat-error>
         <mat-error *ngIf="false">E-mail inválido</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.email.hasError('maxlength')">O email deve conter até 40 caracteres</mat-error>
 
     </mat-form-field>
 
@@ -23,6 +26,8 @@
     <mat-form-field class="example-full-width">
         <mat-label>Nome de Usuário</mat-label>
         <input matInput placeholder="Ex. horacio.augusto" formControlName="usuario">
+        <mat-error *ngIf="cadastroForm.controls.nome.hasError('required')">Nome de Usuário obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.nome.hasError('maxlength')">O nome deve conter até 15 caracteres</mat-error>
 
         <mat-error *ngIf="false">Nome de Usuário inválido</mat-error>
     </mat-form-field>
