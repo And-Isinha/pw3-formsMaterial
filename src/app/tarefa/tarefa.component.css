@@ -1,66 +1,36 @@
-div{
-  max-width: 100%;
-  max-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
 .example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+  max-width: 600px; /* Define uma largura máxima para o formulário */
+  margin: 0 auto;   /* Centraliza o formulário horizontalmente */
+  padding: 20px;    /* Adiciona um padding para espaçamento interno */
+  border: 1px solid #ccc; /* Adiciona uma borda ao formulário */
+  border-radius: 8px; /* Arredonda os cantos do formulário */
+  background-color: #f9f9f9; /* Define uma cor de fundo para o formulário */
 }
 
 .example-full-width {
-  width: 100%;
+  width: 100%; /* Faz com que os campos de input ocupem toda a largura disponível */
 }
 
-.mat-mdc-radio-button ~ .mat-mdc-radio-button{
-  margin-left: 16px;
+mat-form-field {
+  width: 100%; /* Faz com que cada campo de input ocupe toda a largura do contêiner */
 }
 
-section {
-  display: table;
-}
-
-.example-label {
-  display: table-cell;
-  font-size: 14px;
-  margin-left: 8px;
-  min-width: 120px;
+mat-radio-group {
+  display: flex; /* Alinha os botões de rádio em uma linha */
+  gap: 20px; /* Adiciona espaçamento entre os botões de rádio */
 }
 
 .example-button-row {
-  display: table-cell;
-  max-width: 600px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  text-align: center; /* Centraliza o botão na linha */
+  margin-top: 20px; /* Adiciona espaçamento acima do botão */
 }
 
-.example-button-row .mat-mdc-button-base {
-  margin: 8px 8px 8px 0;
-  background-color: blueviolet;
-  color: white;
+h1 {
+  text-align: center; /* Centraliza o título do formulário */
+  margin-bottom: 20px; /* Adiciona um espaçamento abaixo do título */
 }
 
-.example-flex-container {
-  display: flex;
-  justify-content: center;
-  width: 120px;
+label {
+  display: block; /* Faz com que o label ocupe uma linha inteira */
+  margin-bottom: 5px; /* Adiciona espaçamento abaixo do label */
 }
-
- :host{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
- }
-
- .title{
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
- }
-
