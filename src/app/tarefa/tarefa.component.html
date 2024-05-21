@@ -1,23 +1,26 @@
 <div>
-  <form class="example-form">
+  <form class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
     <h1>FORMULÁRIO</h1>
-    
+
     <mat-form-field class="example-full-width">
       <mat-label>Resumo:</mat-label>
-      <input matInput placeholder="Ex. Eu sou andisinha" value="">
+      <input matInput placeholder="Ex. Eu sou andisinha" formControlName="resumo">
+      <mat-error *ngIf="cadastroForm.controls.resumo.hasError('required')">Resumo é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.resumo.hasError('minlength')">Resumo deve ter entre 5 e 20 caracteres</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.resumo.hasError('maxlength')">Resumo deve ter entre 5 e 20 caracteres</mat-error>
     </mat-form-field>
 
     <br/>
     <label>Tipo de Problema:</label>
     <br/>
-    
+
     <mat-radio-group aria-label="Select an option">
-      <mat-radio-button value="1">Tarefa</mat-radio-button>
+      <mat-radio-button value="1" [checked]="true">Tarefa</mat-radio-button>
       <mat-radio-button value="2">Bug</mat-radio-button>
     </mat-radio-group>
     <br />
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width" formControlName="prioridade">
       <mat-label>Escolher Prioridade:</mat-label>
       <mat-select>
         <mat-option value="-1">Selecione</mat-option>

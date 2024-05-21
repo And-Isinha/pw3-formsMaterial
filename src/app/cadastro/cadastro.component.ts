@@ -18,7 +18,9 @@ export class CadastroComponent {
     email : this.formBuilder.control('' ,[Validators.email, Validators.required, Validators.maxLength(40)]),
     usuario : this.formBuilder.control('', [Validators.required, Validators.maxLength(15), CustomValidator.contemEspacos]),
     senha : this.formBuilder.control('', [Validators.required, Validators.minLength(8), Validators.maxLength(16), Validators.pattern(/^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-zA-Z])/)]),
-    confirmarSenha : this.formBuilder.control('', [Validators.required])
+    confirmarSenha : this.formBuilder.control('', [Validators.required]),
+    resumo : this.formBuilder.control('', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]),
+    
 
   }, {
     validators: CustomValidator.mesmasSenhas('senha', 'confirmarSenha')

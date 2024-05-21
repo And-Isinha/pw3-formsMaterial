@@ -37,4 +37,16 @@ export class CustomValidator {
             }
         }
     };
+
+    static definirPrioridade(prioridade: string){
+      return (formGroup: AbstractControl) => {
+        const opcao = formGroup.get(prioridade);
+
+        if(opcao?.value == 2){
+            
+        }
+      }
+
+
+    }
 }
